@@ -9,11 +9,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
           integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-    <title>History of the Internet</title>
+    <title>D.L.C.</title>
 </head>
 <body>
 <nav class="navbar navbar-dark bg-dark">
-    <a class="navbar-brand" href="index.html"><img src="imgs/logo.svg" style="width: 24px;height: 24px"><strong>&nbsp
+    <a class="navbar-brand" href="index.html"><img src="imgs/logo.svg" style="align-content: center"><strong>&nbsp
         D.L.C.</strong></a>
     <button aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"
             class="navbar-toggler"
@@ -39,7 +39,8 @@
                 <div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu">
                     <a class="dropdown-item" href="../../DLCWebsite/docs/virtual.html">Virtualization</a>
                     <a class="dropdown-item" href="../../DLCWebsite/docs/container.html">Containerization</a>
-                    <a class="dropdown-item" href="../../DLCWebsite/docs/virtvscont.html">Virtualization vs. Containerization</a>
+                    <a class="dropdown-item" href="../../DLCWebsite/docs/virtvscont.html">Virtualization vs.
+                        Containerization</a>
                     <a class="dropdown-item" href="webserver.html">How To Setup A Web Server - Docker</a>
                     <a class="dropdown-item active bg-dark" href="linux.html">Linux Explained<span
                             class="sr-only">(current)</span></a>
@@ -61,25 +62,128 @@
         <div class="col-8">
             <h1><strong>Linux Explained</strong></h1>
             <p>
+                To take the right steps towards mastering modern web development, it is important to have some basic
+                knowledge of how to navigate the command line, or terminal if you are using MacOS. In order to do that,
+                let us introduce you to the basics of Linux. Linux is an operating system that manages all of the
+                hardware resources associated with your desktop or laptop. Basically, it manages all the communications
+                between your software and hardware.
+            </p>
+            <p>
+                Linux is important in the context of this website because through Linux, we will teach you how to log
+                into your Docker container from your command line or terminal. So, let us begin with some basic commands
+                that you can use in your command line. To correctly identify how to enter a command line, we will be
+                using a dollar sign ($) to signify the prompt. When applying the examples below, simply enter the
+                command that follows a dollar sign.
+            </p>
+            <p>
+            <h3>Opening the Terminal</h3>
+            When first accessing the terminal, you will see:
+            <pre>
+  <code>
+	username@devicename: - $
+  </code>
+</pre>
 
+            In some cases, you might see a percentage (%) sign instead of ($). This informs the user that they are
+            accessing the terminal as User X and from Device Y. When first opening the terminal, the terminal opens up
+            in your home folder. To identify and be sure of where your home folder is, you can enter:
+
+            <pre>
+  <code>
+	$ pwd
+  </code>
+</pre>
+            This should return an address in the form of /Users/username. The above command will always tell you in what
+            folder you are. Pwd is short for “print working directory”. To navigate back to your home folder, you can
+            enter:
+
+            <pre>
+  <code>
+	$ cd
+  </code>
+</pre>
+
+            This will always direct you back to the home folder. To navigate to another folder that is located on your
+            computer, type:
+
+            <pre>
+  <code>
+	$ cd /Applications/Utilities
+  </code>
+</pre>
+
+            This will send you to the Utilities folder. However, if you are not sure of what folders are present under
+            your home folder, enter:
+
+            <pre>
+  <code>
+	$ ls
+  </code>
+</pre>
+
+            “ls” will list the contents of the current directory. Adding “-l” to the above command will display your
+            folders in a list format. Adding “-a” will view all folders including hidden folders. Combining them and
+            adding “-la” to the above command will view all folders including hidden ones in a list form.
+            </p>
+            <p>
+            <h3>Logging In To Docker Image</h3>
+            In order to successfully login to docker through your command line, make sure you have installed and ran
+            Docker on your computer. If you see the Docker logo in your bar:
+            </p>
+            <img src="imgs/dockerbar.png" height="50" width="600" alt="dockerbar">
+            <p>
+                it means that Docker is running on your computer. To make
+                sure that it is running correctly, run “docker run hello-world” to test your installation. This is what
+                it
+                should look like:
+            </p>
+            <img src="imgs/dockerrun.jpg" height="400" width="600" alt="dockerbar">
+            <p>
+                Next, run “docker pull ubuntu” in your command line window to download all the Docker images on your
+                device.
+                Then enter “docker images” to check existing Docker images on your computer.
+            </p>
+            <img src="imgs/dockerimages.jpg" height="50" width="600" alt="dockerbar">
+            <p>
+                Next, you will run the ubuntu image to start a Docker container, then log into this Ubuntu container:
+            <pre>
+  <code>
+	$ docker run -it ubuntu:latest /bin/bash
+  </code>
+</pre>
+            The parameter “-it” of Docker brings you an interactive shell to communicate with the “virtual machine”. The
+            command line will display a container ID as a response.
+            <img src=”imgs/dockerid.jpg” alt=”dockerid”>
+            The container ID in this example is “c9f965a4a0fe”. Now that you have successfully logged into your
+            container, you can install applications in the container. Update the system using “apt-get update”. Next,
+            you can use “apt-get install” to install applications. You can install apache2 which is an http server that
+            allows you to host a web server in a Docker container. To learn more about this, visit the <a
+                href=”webserver.html”>How to Setup a Web Server on Docker?</a> page. Furthermore, you can also install
+            vim which is a text editor that allows you to edit files within the terminal along with many other
+            applications.
+            </p>
+            <p>
+                Whenever you are done with your work, simply use command “exit” to exit the container and commit the
+                container along with your changes that you just made to create a new Docker image. Check the container
+                using “docker ps-a”. Then, create a new Docker image using:
+            <pre>
+  <code>
+	$ docker commit c9f965a4a0fe ubuntu-my_container
+  </code>
+</pre>
+            “c9f965a4a0fe” will be the container ID and ubuntu-my_container is the name of the new Docker image. Now, if
+            you use “docker images” again, your new docker image will be listed. This should cover the basic steps of
+            how to use the command line and your terminal to log in to your Docker container.
             </p>
             <p>
 
-            </p>
-            <img src="" height="400" width="600" alt=""
-                 style="align-content: center">
-            <p>
+                pre code {
+                background-color: #eee;
+                border: 1px solid #999;
+                display: block;
+                padding: 20px;
+                }
 
-            </p>
-            <p>
-
-            </p>
-            <p>
-
-                <br>
-                <br>
-                <br>
-            </p>
         </div>
         <div class="col-4">
             <div class="card text-white bg-dark mb-3" style="width: 18rem;">
@@ -87,12 +191,18 @@
                     <strong>Topics</strong>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><a class="text-dark" href="../../DLCWebsite/docs/virtual.html">Virtualization</a></li>
-                    <li class="list-group-item"><a class="text-dark" href="../../DLCWebsite/docs/container.html">Containerization</a></li>
-                    <li class="list-group-item"><a class="text-dark" href="../../DLCWebsite/docs/virtvscont.html">Virtualization vs. Containerization</a></li>
-                    <li class="list-group-item"><a class="text-dark" href="webserver.html">How To Setup A Web Server - Docker</a></li>
-                    <li class="list-group-item active bg-secondary"><a class="text-white" href="linux.html"><strong>Linux Explained</strong></a></li>
-                    <li class="list-group-item"><a class="text-dark" href="dockerpycharm.html">Connect Docker and Pycharm</a></li>
+                    <li class="list-group-item"><a class="text-dark" href="../../DLCWebsite/docs/virtual.html">Virtualization</a>
+                    </li>
+                    <li class="list-group-item"><a class="text-dark" href="../../DLCWebsite/docs/container.html">Containerization</a>
+                    </li>
+                    <li class="list-group-item"><a class="text-dark" href="../../DLCWebsite/docs/virtvscont.html">Virtualization
+                        vs. Containerization</a></li>
+                    <li class="list-group-item"><a class="text-dark" href="webserver.html">How To Setup A Web Server -
+                        Docker</a></li>
+                    <li class="list-group-item active bg-secondary"><a class="text-white" href="linux.html"><strong>Linux
+                        Explained</strong></a></li>
+                    <li class="list-group-item"><a class="text-dark" href="dockerpycharm.html">Connect Docker and
+                        Pycharm</a></li>
                 </ul>
             </div>
         </div>
@@ -109,6 +219,9 @@ footer {
 	color: Black;
 	text-align: center;
 }
+
+
+
 
 
 
