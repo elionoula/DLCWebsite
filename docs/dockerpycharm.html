@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
           integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-    <title>History of the Internet</title>
+    <title>D.L.C.</title>
 </head>
 <body>
 <nav class="navbar navbar-dark bg-dark">
@@ -39,7 +39,8 @@
                 <div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu">
                     <a class="dropdown-item" href="../../DLCWebsite/docs/virtual.html">Virtualization</a>
                     <a class="dropdown-item" href="../../DLCWebsite/docs/container.html">Containerization</a>
-                    <a class="dropdown-item" href="../../DLCWebsite/docs/virtvscont.html">Virtualization vs. Containerization</a>
+                    <a class="dropdown-item" href="../../DLCWebsite/docs/virtvscont.html">Virtualization vs.
+                        Containerization</a>
                     <a class="dropdown-item" href="webserver.html">How To Setup A Web Server - Docker</a>
                     <a class="dropdown-item active bg-dark" href="../../DLCWebsite/docs/linux.html">Linux Explained<span
                             class="sr-only">(current)</span></a>
@@ -61,25 +62,78 @@
         <div class="col-8">
             <h1><strong>Connect Docker and Pycharm</strong></h1>
             <p>
-
+                Below you will find a tutorial to guide you through configuring Docker in Pycharm to write python code.
+                For this tutorial to work seamlessly, make sure that Docker is installed and running on your computer.
+                Now follow the instructions below.
             </p>
             <p>
-
-            </p>
-            <img src="" height="400" width="600" alt=""
-                 style="align-content: center">
-            <p>
-
+            <h3>Step 1 - Launch PyCharm</h3>
+            When launching PyCharm and after installing Docker, the Docker plugin will activate by default. If the
+            plugin is not activated, enable it under Preferences > Plugins > Docker.
             </p>
             <p>
-
+            <h3>Step 2 - Configure Docker in Pycharm</h3>
+            <ol type=”1”>
+                <p>
+                <li>Go to ‘Preferences’ </li>
+                </p>
+                <img src="imgs/dockerpref.png" height="300" width="300" alt="dockerpref">
+                <p>
+                <li>Go to ‘Build, Execution, Deployment’</li>
+                </p>
+                <img src="imgs/dockerbuild.png" height="500" width="500" alt="dockerbuild">
+                <p>
+                <li>Choose Docker, and if you do not see Docker already configured, click the add (+) button.</li>
+                </p>
+                <img src="imgs/dockerdocker.png" height="500" width="600" alt="dockerdocker">
+            </ol>
             </p>
             <p>
-
-                <br>
-                <br>
-                <br>
+            <h3>Step 3 - Create a Python Project with Docker</h3>
+            <ol type=”1”>
+                <p>
+                <li>Create a Python project, and add a <code>my_script.py</code> with your Python Script to it.</li>
+                </p>
+                <img src="imgs/pythonscript.png" height="500" width="500" alt="pythonscript">
+                <li>Create a new file and name it <code>Dockerfile</code>. Make sure that this file does not contain any
+                    attachments or suffixes in the name or else this will not work.
+                </li>
+                <p>
+                <li>Add the following code to Dockerfile.</li>
+                </p>
+                <img src="imgs/dockerfile.png" height="500" width="500" alt="dockerfile">
+            </ol>
             </p>
+            <p>
+            <h3>Step 4 - Run Docker</h3>
+            <ol type=”1”>
+                <p>
+                <li>Before running Docker, we need to configure the file to run in the container. To do so, in the menu
+                    bar head to Run > Add/Edit Configurations. </li>
+                </p>
+                <img src="imgs/addconfig.png" height="300" width="300" alt="addconfig">
+                <p>
+                <li>Make sure that under the server you have Docker selected, and that your Dockerfile is selected under
+                    “Dockerfile”. Don’t forget to select “Run built image.”</li>
+                <img src="imgs/dockerconfig.png" height="600" width="600" alt="dockerconfig">
+                </p>
+                <li>Finally, after all your settings and configurations are in place, you can hit run.</li>
+                <p>
+                <li>A “Services” tab will pop up when you hit “Run”. Under the Services tab, you will find two subtabs,
+                    “Build Log” and “Attached Console”. In the first, you will find information about your build and
+                    container’s process. The second tab will show you the results of running your python code.</li>
+                </p>
+                <img src="imgs/buildlog.png" height="600" width="600" alt="buildlog">
+                <p>
+                <li>Following the example that we followed, our Python module will produce the following barcode that
+                    can be seen in the Attached Console.</li>
+                </p>
+                <img src="imgs/attconsole.png" height="600" width="600" alt="attconsole">
+                <p>
+                <li>If you have any difficulties, make sure that you have the right interpreter selected..</li>
+                </p>
+                <img src="imgs/interpreter.png" height="600" width="600" alt="interpreter">
+            </ol>
         </div>
         <div class="col-4">
             <div class="card text-white bg-dark mb-3" style="width: 18rem;">
@@ -87,12 +141,19 @@
                     <strong>Topics</strong>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><a class="text-dark" href="../../DLCWebsite/docs/virtual.html">Virtualization</a></li>
-                    <li class="list-group-item"><a class="text-dark" href="../../DLCWebsite/docs/container.html">Containerization</a></li>
-                    <li class="list-group-item"><a class="text-dark" href="../../DLCWebsite/docs/virtvscont.html">Virtualization vs. Containerization</a></li>
-                    <li class="list-group-item"><a class="text-dark" href="webserver.html">How To Setup A Web Server - Docker</a></li>
-                    <li class="list-group-item"><a class="text-dark" href="../../DLCWebsite/docs/linux.html">Linux Explained</a></li>
-                    <li class="list-group-item active bg-secondary"><a class="text-white" href="dockerpycharm.html"><strong>Connect Docker and Pycharm</strong></a></li>
+                    <li class="list-group-item"><a class="text-dark" href="../../DLCWebsite/docs/virtual.html">Virtualization</a>
+                    </li>
+                    <li class="list-group-item"><a class="text-dark" href="../../DLCWebsite/docs/container.html">Containerization</a>
+                    </li>
+                    <li class="list-group-item"><a class="text-dark" href="../../DLCWebsite/docs/virtvscont.html">Virtualization
+                        vs. Containerization</a></li>
+                    <li class="list-group-item"><a class="text-dark" href="webserver.html">How To Setup A Web Server -
+                        Docker</a></li>
+                    <li class="list-group-item"><a class="text-dark" href="../../DLCWebsite/docs/linux.html">Linux
+                        Explained</a></li>
+                    <li class="list-group-item active bg-secondary"><a class="text-white"
+                                                                       href="dockerpycharm.html"><strong>Connect Docker
+                        and Pycharm</strong></a></li>
                 </ul>
             </div>
         </div>
@@ -109,6 +170,7 @@ footer {
 	color: Black;
 	text-align: center;
 }
+
 
 
 
