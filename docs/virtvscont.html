@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
           integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-    <title>History of the Internet</title>
+    <title>D.L.C.</title>
 </head>
 <body>
 <nav class="navbar navbar-dark bg-dark">
@@ -39,8 +39,9 @@
                 <div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu">
                     <a class="dropdown-item" href="../../DLCWebsite/docs/virtual.html">Virtualization</a>
                     <a class="dropdown-item" href="../../DLCWebsite/docs/container.html">Containerization</a>
-                    <a class="dropdown-item active bg-dark" href="virtvscont.html">Virtualization vs. Containerization<span
-                            class="sr-only">(current)</span></a>
+                    <a class="dropdown-item active bg-dark" href="virtvscont.html">Virtualization vs.
+                        Containerization<span
+                                class="sr-only">(current)</span></a>
                     <a class="dropdown-item" href="webserver.html">How To Setup A Web Server - Docker</a>
                     <a class="dropdown-item" href="linux.html">Linux Explained</a>
                     <a class="dropdown-item" href="dockerpycharm.html">Connect Docker and Pycharm</a>
@@ -61,18 +62,29 @@
         <div class="col-8">
             <h1><strong>Virtualization vs. Containerization</strong></h1>
             <p>
-
+                The benefits of leveraging virtualization are that multiple operating systems can be run simultaneously,
+                easy recovery in case of failure, total cost ownership reduction, provides energy savings, and it
+                reduces the workload. There are also drawbacks when leveraging virtualization, for example, it creates a
+                scalability issue, it creates a security risk, it has a longer boot up time.
             </p>
-            <img src="" height="400" width="600" alt=""
-                 style="align-content: center">
             <p>
-
+                The benefits of leveraging containerization is that it is lightweight, multiple containers on a single
+                server can be deployed, only one operating system is needed to be maintained, and scaling becomes fast
+                and easy. Containerization also has drawbacks, some of which are: containers on a host machine must be
+                designed to run on the same kind of operating system, security vulnerability in the OS kernel.
             </p>
-            <img src="" height="400" width="600" alt=""
-                 style="align-content: center">
             <p>
-
-                <img src="" height="400" width="600" alt=""
+                As you can see above, both methods have benefits and drawbacks. Essentially, virtualization allows you
+                to run multiple operating systems on the hardware of a physical server and containerization allows you
+                to deploy multiple applications using the same operating system on a single server. If you are deciding
+                which method to use you have to decide what you are trying to solve for. If you want to support
+                applications that require the full functionality of an operating system when you deploy multiple
+                applications, then utilizing virtualization is a good method. Using containers is a good choice when you
+                want to minimize the number of servers you are using for multiple applications. If the life cycle of the
+                task you are setting up is short, containers are a great choice because they are fast to set up.
+                Ultimately, you have to decide which method is best for you to implement based on your use case and what
+                your IT strategy is.
+                <img src="imgs/containerization-vs-virtualization.jpg" height="500" width="700" alt="versus"
                      style="align-content: center">
             </p>
         </div>
@@ -82,12 +94,18 @@
                     <strong>Topics</strong>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><a class="text-dark" href="../../DLCWebsite/docs/virtual.html">Virtualization</a></li>
-                    <li class="list-group-item"><a class="text-dark" href="../../DLCWebsite/docs/container.html">Containerization</a></li>
-                    <li class="list-group-item active bg-secondary"><a class="text-white" href="virtvscont.html"><strong>Virtualization vs. Containerization</strong></a></li>
-                    <li class="list-group-item"><a class="text-dark" href="webserver.html">How To Setup A Web Server - Docker</a></li>
+                    <li class="list-group-item"><a class="text-dark" href="../../DLCWebsite/docs/virtual.html">Virtualization</a>
+                    </li>
+                    <li class="list-group-item"><a class="text-dark" href="../../DLCWebsite/docs/container.html">Containerization</a>
+                    </li>
+                    <li class="list-group-item active bg-secondary"><a class="text-white"
+                                                                       href="virtvscont.html"><strong>Virtualization vs.
+                        Containerization</strong></a></li>
+                    <li class="list-group-item"><a class="text-dark" href="webserver.html">How To Setup A Web Server -
+                        Docker</a></li>
                     <li class="list-group-item"><a class="text-dark" href="linux.html">Linux Explained</a></li>
-                    <li class="list-group-item"><a class="text-dark" href="dockerpycharm.html">Connect Docker and Pycharm</a></li>
+                    <li class="list-group-item"><a class="text-dark" href="dockerpycharm.html">Connect Docker and
+                        Pycharm</a></li>
                 </ul>
             </div>
         </div>
@@ -103,6 +121,7 @@ footer {
 	color: Black;
 	text-align: center;
 }
+
 
 </style>
 
