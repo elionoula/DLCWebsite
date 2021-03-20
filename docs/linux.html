@@ -143,7 +143,7 @@
                 device.
                 Then enter “docker images” to check existing Docker images on your computer.
             </p>
-            <img src="imgs/dockerimages.jpg" height="50" width="600" alt="dockerbar">
+            <img src="imgs/dockerimages.jpg" height="100" width="600" alt="dockerbar">
             <p>
                 Next, you will run the ubuntu image to start a Docker container, then log into this Ubuntu container:
             <pre>
@@ -151,16 +151,23 @@
 	$ docker run -it ubuntu:latest /bin/bash
   </code>
 </pre>
-            The parameter “-it” of Docker brings you an interactive shell to communicate with the “virtual machine”. The
-            command line will display a container ID as a response.
-            <img src=”imgs/dockerid.jpg” alt=”dockerid”>
-            The container ID in this example is “c9f965a4a0fe”. Now that you have successfully logged into your
-            container, you can install applications in the container. Update the system using “apt-get update”. Next,
-            you can use “apt-get install” to install applications. You can install apache2 which is an http server that
-            allows you to host a web server in a Docker container. To learn more about this, visit the <a
-                href=”webserver.html”>How to Setup a Web Server on Docker?</a> page. Furthermore, you can also install
-            vim which is a text editor that allows you to edit files within the terminal along with many other
-            applications.
+            <p>
+                The parameter “-it” of Docker brings you an interactive shell to communicate with the “virtual machine”.
+                The
+                command line will display a container ID as a response.
+            </p>
+            <img src="imgs/dockerid.jpg" height="50" width="800" alt="dockerid">
+            <p>
+                The container ID in this example is “c9f965a4a0fe”. Now that you have successfully logged into your
+                container, you can install applications in the container. Update the system using “apt-get update”.
+                Next,
+                you can use “apt-get install” to install applications. You can install apache2 which is an http server
+                that
+                allows you to host a web server in a Docker container. To learn more about this, visit the <a
+                    href=”webserver.html”>How to Setup a Web Server on Docker?</a> page. Furthermore, you can also
+                install
+                vim which is a text editor that allows you to edit files within the terminal along with many other
+                applications.
             </p>
             <p>
                 Whenever you are done with your work, simply use command “exit” to exit the container and commit the
@@ -219,6 +226,7 @@ footer {
 	color: Black;
 	text-align: center;
 }
+
 
 
 
