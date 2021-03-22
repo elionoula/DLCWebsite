@@ -12,7 +12,207 @@
     <title>D.L.C.</title>
 </head>
 <body>
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html"><img src="imgs/logo.svg" style="width: 24px;height: 24px"><strong>&nbsp
+        D.L.C.</strong></a>
+    <button aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"
+            class="navbar-toggler"
+            data-target="#navbarNavDropdown" data-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html"><strong>Home</strong><span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html"><strong>About This Website</strong></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="team.html"><strong>Team</strong></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown"
+                   href="#" id="navbarDropdownMenuLink" role="button">
+                    <strong>Topics</strong>
+                </a>
+                <div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu">
+                    <a class="dropdown-item" href="virtual.html">Virtualization</a>
+                    <a class="dropdown-item" href="container.html">Containerization</a>
+                    <a class="dropdown-item" href="virtvscont.html">Virtualization vs. Containerization</a>
+                    <a class="dropdown-item" href="webserver.html">How To Setup A Web Server - Docker</a>
+                    <a class="dropdown-item" href="linux.html">Linux Explained</a>
+                    <a class="dropdown-item" href="dockerpycharm.html">Connect Docker and Pycharm</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
 
+<div class="py-5 text-center bg-dark" class="bg-dark">
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img width="788.6063" height="505.46457" src="imgs/containership.svg" alt="First slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Docker, Linux and Containerization</h5>
+                    <p>Docker, Linux, and containerization explained for new users!</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img width="788.6063" height="505.46457" src="imgs/virtualization2.svg" alt="Second slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>What is Virtualization?</h5>
+                    <p>Let's explore Virtualization!</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img width="788.6063" height="505.46457" src="imgs/webserver.svg" alt="Third slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>How to Setup a Web Server on Docker?</h5>
+                    <p>Let's walk you through it.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img width="788.6063" height="505.46457" src="imgs/linux.svg" alt="Fourth slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Linux</h5>
+                    <p>Do you speak Linux?</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img width="788.6063" height="505.46457" src="imgs/loader-svgrepo-com.svg" alt="Fifth slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Docker and Pycharm</h5>
+                    <p>Teamwork makes the dream work.</p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+<div class="container-fluid bg-dark">
+    <div class="row justify-content-center">
+        <div class="col-auto mb-3">
+            <div class="card text-white bg-secondary mb-3" style="width: 300px;height: 500px">
+                <img src="imgs/containership.svg" class="card-img-top embed-responsive-item"
+                     style="width: 300px; height:300px" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">Docker, Linux & Containerization</h5>
+                    <p class="card-text">Let's learn!</p></div>
+                <div class="card-footer">
+                    <a href="about.html" class="btn btn-primary">Learn more...</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-auto mb-3">
+            <div class="card text-white bg-secondary mb-3" style="width: 300px;height: 500px">
+                <img src="imgs/virtualization2.svg" class="card-img-top embed-responsive-item"
+                     style="width: 300px; height:300px" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">What is Virtualization?</h5>
+                    <p class="card-text">Let's explore Virtualization!</p>
+                </div>
+                <div class="card-footer">
+                    <a href="virtual.html" class="btn btn-primary">Learn more...</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-auto mb-3">
+            <div class="card text-white bg-secondary mb-3" style="width: 300px;height: 500px">
+                <img src="imgs/docker.svg" class="card-img-top embed-responsive-item"
+                     style="width: 300px; height:300px" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">Containerization and Docker!</h5>
+                    <p class="card-text">Docker, containers and more...</p>
+                </div>
+                <div class="card-footer">
+                    <a href="container.html" class="btn btn-primary">Learn more...</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-auto mb-3">
+            <div class="card text-white bg-secondary mb-3" style="width: 300px;height: 500px">
+                <img src="imgs/webserver.svg" class="card-img-top embed-responsive-item"
+                     style="width: 300px; height:300px" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">How to Setup a Web Server on Docker?</h5>
+                    <p class="card-text">A step-by-step walk through.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="webserver.html" class="btn btn-primary">Learn more...</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-auto mb-3">
+            <div class="card text-white bg-secondary mb-3" style="width: 300px;height: 500px">
+                <img src="imgs/linux.svg" class="card-img-top embed-responsive-item"
+                     style="width: 300px; height:300px" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">Linux</h5>
+                    <p class="card-text">Do you speak Linux?</p>
+                </div>
+                <div class="card-footer">
+                    <a href="linux.html" class="btn btn-primary">Learn more...</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-auto mb-3">
+            <div class="card text-white bg-secondary mb-3" style="width: 300px;height: 500px">
+                <img src="imgs/loader-svgrepo-com.svg" class="card-img-top embed-responsive-item"
+                     style="width: 300px; height:300px" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">Docker and Pycharm</h5>
+                    <p class="card-text">Use Docker with your Pycharm Projects!</p>
+                </div>
+                <div class="card-footer">
+                    <a href="dockerpycharm.html" class="btn btn-primary">Learn more...</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<style>
+    footer {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        background-color: White;
+        color: Black;
+        text-align: center;
+    }
+
+</style>
+
+<footer>
+    <li><a class="text-muted" href="https://www.linkedin.com/in/anikchattopadhyay/">Anik Chattopadhyay</a></li>
+    <li><a class="text-muted" href="https://www.linkedin.com/in/elio-nicolas/">Elio Nicolas</a></li>
+</footer>
 
 </body>
 <!-- Optional JavaScript -->

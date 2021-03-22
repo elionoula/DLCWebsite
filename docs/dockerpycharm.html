@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>D.L.C.</title>
+</head>
+<body>
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html"><img src="imgs/logo.svg" style="width: 24px;height: 24px"><strong>&nbsp
+        D.L.C.</strong></a>
+    <button aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"
+            class="navbar-toggler"
+            data-target="#navbarNavDropdown" data-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html"><strong>Home</strong><span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../../DLCWebsite/docs/about.html"><strong>About This Website</strong></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../../DLCWebsite/docs/team.html"><strong>Team</strong></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown"
+                   href="#" id="navbarDropdownMenuLink" role="button">
+                    <strong>Topics</strong>
+                </a>
+                <div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu">
+                    <a class="dropdown-item" href="../../DLCWebsite/docs/virtual.html">Virtualization</a>
+                    <a class="dropdown-item" href="../../DLCWebsite/docs/container.html">Containerization</a>
+                    <a class="dropdown-item" href="../../DLCWebsite/docs/virtvscont.html">Virtualization vs.
+                        Containerization</a>
+                    <a class="dropdown-item" href="webserver.html">How To Setup A Web Server - Docker</a>
+                    <a class="dropdown-item active bg-dark" href="../../DLCWebsite/docs/linux.html">Linux Explained<span
+                            class="sr-only">(current)</span></a>
+                    <a class="dropdown-item" href="dockerpycharm.html">Connect Docker and Pycharm</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a class="text-dark" href="index.html">Home</a></li>
+        <li class="breadcrumb-item active">Topics</li>
+        <li class="breadcrumb-item active" aria-current="page"><strong>Connect Docker and Pycharm</strong></li>
+    </ol>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-8">
+            <h1><strong>Connect Docker and Pycharm</strong></h1>
+            <p>
+                Below you will find a tutorial to guide you through configuring Docker in Pycharm to write python code.
+                For this tutorial to work seamlessly, make sure that Docker is installed and running on your computer.
+                Now follow the instructions below.
+            </p>
+            <p>
+            <h3>Step 1 - Launch PyCharm</h3>
+            When launching PyCharm and after installing Docker, the Docker plugin will activate by default. If the
+            plugin is not activated, enable it under Preferences > Plugins > Docker.
+            </p>
+            <p>
+            <h3>Step 2 - Configure Docker in Pycharm</h3>
+            <ol type=”1”>
+                <p>
+                <li>Go to ‘Preferences’ </li>
+                </p>
+                <img src="imgs/dockerpref.png" height="50%" width="50%" alt="dockerpref">
+                <p>
+                <li>Go to ‘Build, Execution, Deployment’</li>
+                </p>
+                <img src="imgs/dockerbuild.png" height="100%" width="100%" alt="dockerbuild">
+                <p>
+                <li>Choose Docker, and if you do not see Docker already configured, click the add (+) button.</li>
+                </p>
+                <img src="imgs/dockerdocker.png" height="100%" width="100%" alt="dockerdocker">
+            </ol>
+            </p>
+            <p>
+            <h3>Step 3 - Create a Python Project with Docker</h3>
+            <ol type=”1”>
+                <p>
+                <li>Create a Python project, and add a <code>my_script.py</code> with your Python Script to it.</li>
+                </p>
+                <img src="imgs/pythonscript.png" height="100%" width="100%" alt="pythonscript">
+                <li>Create a new file and name it <code>Dockerfile</code>. Make sure that this file does not contain any
+                    attachments or suffixes in the name or else this will not work.
+                </li>
+                <p>
+                <li>Add the following code to Dockerfile.</li>
+                </p>
+                <img src="imgs/dockerfile.png" height="100%" width="100%" alt="dockerfile">
+            </ol>
+            </p>
+            <p>
+            <h3>Step 4 - Run Docker</h3>
+            <ol type=”1”>
+                <p>
+                <li>Before running Docker, we need to configure the file to run in the container. To do so, in the menu
+                    bar head to Run > Add/Edit Configurations. </li>
+                </p>
+                <img src="imgs/addconfig.png" height="50%" width="50%" alt="addconfig">
+                <p>
+                <li>Make sure that under the server you have Docker selected, and that your Dockerfile is selected under
+                    “Dockerfile”. Don’t forget to select “Run built image.”</li>
+                <img src="imgs/dockerconfig.png" height="100%" width="100%" alt="dockerconfig">
+                </p>
+                <li>Finally, after all your settings and configurations are in place, you can hit run.</li>
+                <p>
+                <li>A “Services” tab will pop up when you hit “Run”. Under the Services tab, you will find two subtabs,
+                    “Build Log” and “Attached Console”. In the first, you will find information about your build and
+                    container’s process. The second tab will show you the results of running your python code.</li>
+                </p>
+                <img src="imgs/buildlog.png" height="100%" width="100%" alt="buildlog">
+                <p>
+                <li>Following the example that we followed, our Python module will produce the following barcode that
+                    can be seen in the Attached Console.</li>
+                </p>
+                <img src="imgs/attconsole.png" height="100%" width="100%" alt="attconsole">
+                <p>
+                <li>If you have any difficulties, make sure that you have the right interpreter selected..</li>
+                </p>
+                <img src="imgs/interpreter.png" heigh="100%" width="100%" alt="interpreter">
+            </ol>
+            <br>
+            <br>
+            <br>
+        </div>
+        <div class="col-4">
+            <div class="card text-white bg-dark mb-3" style="width: 18rem;">
+                <div class="card-header">
+                    <strong>Topics</strong>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><a class="text-dark" href="../../DLCWebsite/docs/virtual.html">Virtualization</a>
+                    </li>
+                    <li class="list-group-item"><a class="text-dark" href="../../DLCWebsite/docs/container.html">Containerization</a>
+                    </li>
+                    <li class="list-group-item"><a class="text-dark" href="../../DLCWebsite/docs/virtvscont.html">Virtualization
+                        vs. Containerization</a></li>
+                    <li class="list-group-item"><a class="text-dark" href="webserver.html">How To Setup A Web Server -
+                        Docker</a></li>
+                    <li class="list-group-item"><a class="text-dark" href="../../DLCWebsite/docs/linux.html">Linux
+                        Explained</a></li>
+                    <li class="list-group-item active bg-secondary"><a class="text-white"
+                                                                       href="dockerpycharm.html"><strong>Connect Docker
+                        and Pycharm</strong></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+footer {
+	position: fixed;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	background-color: White;
+	color: Black;
+	text-align: center;
+}
+
+
+</style>
+
+<footer>
+    <li><a class="text-muted" href="https://www.linkedin.com/in/anikchattopadhyay/">Anik Chattopadhyay</a></li>
+    <li><a class="text-muted" href="https://www.linkedin.com/in/elio-nicolas/">Elio Nicolas</a></li>
+</footer>
+</body>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+</html>

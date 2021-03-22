@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>D.L.C.</title>
+</head>
+<body>
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html"><img src="imgs/logo.svg" style="width: 24px;height: 24px"><strong>&nbsp
+        D.L.C.</strong></a>
+    <button aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"
+            class="navbar-toggler"
+            data-target="#navbarNavDropdown" data-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html"><strong>Home</strong><span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../../DLCWebsite/docs/about.html"><strong>About This Website</strong></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../../DLCWebsite/docs/team.html"><strong>Team</strong></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown"
+                   href="#" id="navbarDropdownMenuLink" role="button">
+                    <strong>Topics</strong>
+                </a>
+                <div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu">
+                    <a class="dropdown-item" href="virtual.html">Virtualization</a>
+                    <a class="dropdown-item active bg-dark" href="container.html">Containerization</a><span
+                        class="sr-only">(current)</span></a>
+                    <a class="dropdown-item" href="virtvscont.html">Virtualization vs. Containerization</a>
+                    <a class="dropdown-item" href="webserver.html">How To Setup A Web Server - Docker</a>
+                    <a class="dropdown-item" href="linux.html">Linux Explained</a>
+                    <a class="dropdown-item" href="dockerpycharm.html">Connect Docker and Pycharm</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a class="text-dark" href="index.html">Home</a></li>
+        <li class="breadcrumb-item active">Topics</li>
+        <li class="breadcrumb-item active" aria-current="page"><strong>Containerization</strong></li>
+    </ol>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-8">
+            <h1><strong>Containerization</strong></h1>
+            <p>
+                Containerization has become a major trend in software development, it acts as an alternative to
+                virtualization. The concept of containerization is to package up software code and its dependencies so
+                it can run smoothly on any type of infrastructure. Containerization is defined as a form of operating
+                system virtualization, where applications are run in isolated spaces called contained and use the same
+                shared operating system. A container is packaged with everything you need for an application to run
+                (libraries, binaries, config files, and dependencies), and the container itself is away from the host
+                operating system. This results in containerized applications that can be run on various infrastructures
+                like bare metal, within virtual machines, and in the cloud, without needing for each environment to be
+                refactored. The basics of containerization can be summarized to “written once and run anywhere”.
+            </p>
+            <img src="imgs/containerization.png" height="600" width="700" alt="container"
+                 style="align-content: center">
+            <p>
+
+                To describe containerization in more depth and to understand how it truly works you should think of each
+                container as an executable package of software that runs on top of a host operating system. A host
+                operating system can support tons of containers concurrently. This is an ideal set up because all
+                containers run minimal and resource isolated processes that others cannot access. The best way to
+                visualize a containerized application is like the top layer of a multi-layered cake. The bottommost
+                layer would be hardware infrastructure like a CPU and the network interfaces. Above that layer would be
+                the host operating system and its kernel, the kernel acts as a bridge between the software operating
+                system and the physical hardware of the system. On top of this would be the container engine and its
+                guest operating system (this would be where something like Docker sits). At the very top are the
+                libraries and bins for each application and the application themselves, running in their isolated spaces
+                (containers).
+                <br>
+                <br>
+                <br>
+            </p>
+        </div>
+        <div class="col-4">
+            <div class="card text-white bg-dark mb-3" style="width: 18rem;">
+                <div class="card-header">
+                    <strong>Topics</strong>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><a class="text-dark" href="virtual.html">Virtualization</a></li>
+                    <li class="list-group-item active bg-secondary"><a class="text-white" href="container.html"><strong>Containerization</strong></a>
+                    </li>
+                    <li class="list-group-item"><a class="text-dark" href="virtvscont.html">Virtualization vs.
+                        Containerization</a></li>
+                    <li class="list-group-item"><a class="text-dark" href="webserver.html">How To Setup A Web Server -
+                        Docker</a></li>
+                    <li class="list-group-item"><a class="text-dark" href="linux.html">Linux Explained</a></li>
+                    <li class="list-group-item"><a class="text-dark" href="dockerpycharm.html">Connect Docker and
+                        Pycharm</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    footer {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        background-color: White;
+        color: Black;
+        text-align: center;
+    }
+
+
+</style>
+
+<footer>
+    <li><a class="text-muted" href="https://www.linkedin.com/in/anikchattopadhyay/">Anik Chattopadhyay</a></li>
+    <li><a class="text-muted" href="https://www.linkedin.com/in/elio-nicolas/">Elio Nicolas</a></li>
+</footer>
+</body>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+</html>
