@@ -128,22 +128,21 @@
             <p>
             <h3>Logging In To Docker Image</h3>
             In order to successfully login to docker through your command line, make sure you have installed and ran
-            Docker on your computer. If you see the Docker logo in your bar:
+            Docker on your computer. If you see the Docker logo in your bar, as seen below, it means that Docker is running on your computer.
             </p>
-            <img src="imgs/dockerbar.png" height="50" width="600" alt="dockerbar">
+            <img src="imgs/dockerbar.png" width="100%" alt="dockerbar">
             <p>
-                it means that Docker is running on your computer. To make
-                sure that it is running correctly, run “docker run hello-world” to test your installation. This is what
+                To make sure that it is running correctly, run “docker run hello-world” to test your installation. This is what
                 it
                 should look like:
             </p>
-            <img src="imgs/dockerrun.jpg" height="400" width="600" alt="dockerbar">
+            <img src="imgs/dockerrun.jpg" height="400" width="100%" alt="dockerbar">
             <p>
                 Next, run “docker pull ubuntu” in your command line window to download all the Docker images on your
                 device.
                 Then enter “docker images” to check existing Docker images on your computer.
             </p>
-            <img src="imgs/dockerimages.jpg" height="100" width="600" alt="dockerbar">
+            <img src="imgs/dockerimages.jpg" height="100" width="100%" alt="dockerbar">
             <p>
                 Next, you will run the ubuntu image to start a Docker container, then log into this Ubuntu container:
             <pre>
@@ -156,7 +155,7 @@
                 The
                 command line will display a container ID as a response.
             </p>
-            <img src="imgs/dockerid.jpg" height="50" width="800" alt="dockerid">
+            <img src="imgs/dockerid.jpg" height="50" width="120%" alt="dockerid">
             <p>
                 The container ID in this example is “c9f965a4a0fe”. Now that you have successfully logged into your
                 container, you can install applications in the container. Update the system using “apt-get update”.
@@ -182,14 +181,8 @@
             you use “docker images” again, your new docker image will be listed. This should cover the basic steps of
             how to use the command line and your terminal to log in to your Docker container.
             </p>
-            <p>
+            <br><br><br>
 
-                pre code {
-                background-color: #eee;
-                border: 1px solid #999;
-                display: block;
-                padding: 20px;
-                }
 
         </div>
         <div class="col-4">
@@ -217,27 +210,23 @@
 </div>
 
 <style>
-footer {
-	position: fixed;
-	width: 100%;
-	left: 0;
-	bottom: 0;
-	background-color: White;
-	color: Black;
-	text-align: center;
-}
+    footer {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        background-color: White;
+        color: Black;
+        text-align: center;
+    }
 
 
-
-
-
-
-
-
-
-
-
-
+    pre code {
+        background-color: #eee;
+        border: 1px solid #999;
+        display: block;
+        padding: 20px;
+    }
 </style>
 
 <footer>
